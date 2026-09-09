@@ -6,7 +6,7 @@ This document records the technical state of the AetherGraph system before a for
 
 It is a technical change record. It does not distinguish between authors, assign ownership of changes, or assess contribution.
 
-**Note on provenance of this document.** The project directory is not a Git repository (`git rev-parse` fails in `E:\AetherGraph\AetherGraph`), so no commit IDs can be cited. The PRE state was instead recovered from the archive `E:\AetherGraph.rar` (RAR5, timestamped before the correction work began) and extracted to `E:\AetherGraph\_pre_state_reference\AetherGraph\` for verification. All PRE claims below cite line numbers in that extracted tree. All POST claims cite the live tree at `E:\AetherGraph\AetherGraph\`. Numerical results are read from generated artifacts, not from prose.
+**Note on provenance of this document.** The project was not under version control for any of the work described here, so **no commit IDs can be cited for the PRE state or for any individual correction**. A Git repository was initialised only after the work was complete; its initial commit (`810d8c7`) records the corrected state as a whole and does not decompose the change history. The PRE state was instead recovered from the archive `E:\AetherGraph.rar` (RAR5, timestamped before the correction work began) and extracted to `E:\AetherGraph\_pre_state_reference\AetherGraph\` for verification. All PRE claims below cite line numbers in that extracted tree. All POST claims cite the live tree at `E:\AetherGraph\AetherGraph\`. Numerical results are read from generated artifacts, not from prose.
 
 ---
 
