@@ -1,0 +1,82 @@
+{
+  "baseline_evidence_traversal": {
+    "nodes": 13,
+    "edges": 13,
+    "provenance": {
+      "declared": 13
+    },
+    "semantics": {
+      "containment": 6,
+      "access": 3,
+      "evidence": 1,
+      "validation": 2,
+      "correlation": 1
+    },
+    "tri_layer_paths": [
+      {
+        "score": 0.914,
+        "path": [
+          "finding-MAN-DVWA-LOGIN",
+          "cred-git-1",
+          "svc-192.168.65.254-3000"
+        ]
+      },
+      {
+        "score": 0.868,
+        "path": [
+          "finding-MAN-DVWA-LOGIN",
+          "cred-git-1",
+          "svc-192.168.65.254-3000",
+          "host-192.168.65.254"
+        ]
+      }
+    ]
+  },
+  "baseline_attack_traversal": {
+    "nodes": 13,
+    "edges": 13,
+    "provenance": {
+      "declared": 13
+    },
+    "semantics": {
+      "containment": 6,
+      "access": 3,
+      "evidence": 1,
+      "validation": 2,
+      "correlation": 1
+    },
+    "tri_layer_paths": []
+  },
+  "corrected_evidence_traversal": {
+    "nodes": 14,
+    "edges": 13,
+    "provenance": {
+      "observed": 9,
+      "derived": 3,
+      "declared": 1
+    },
+    "semantics": {
+      "containment": 6,
+      "evidence": 4,
+      "validation": 2,
+      "correlation": 1
+    },
+    "tri_layer_paths": []
+  },
+  "corrected_attack_traversal": {
+    "nodes": 14,
+    "edges": 13,
+    "provenance": {
+      "observed": 9,
+      "derived": 3,
+      "declared": 1
+    },
+    "semantics": {
+      "containment": 6,
+      "evidence": 4,
+      "validation": 2,
+      "correlation": 1
+    },
+    "tri_layer_paths": []
+  }
+}

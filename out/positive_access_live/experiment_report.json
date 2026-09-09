@@ -1,0 +1,29 @@
+{
+  "experiment": "positive_access_live",
+  "live_docker_run": true,
+  "token_validated": true,
+  "repository_remote_present": true,
+  "service_independently_observed": true,
+  "credential_type_compatible": true,
+  "access_edge_emitted": true,
+  "access_edge_count": 1,
+  "access_edge_provenance": [
+    "derived"
+  ],
+  "access_edge_justification": [
+    "repository remote http://10.41.159.81:3000/pactest/pac-positive.git resolves to observed service svc-10.41.159.81-3000 on port 3000; its observed http title is 'Gitea: Git with a cup of tea', which identifies product 'gitea'; secret kind gitea-token authenticates to that product"
+  ],
+  "attack_path_emitted": true,
+  "attack_path_count_two_origin": 1,
+  "attack_path_count_three_origin": 0,
+  "path_score": 0.855,
+  "path": [
+    "cred-git-1",
+    "svc-10.41.159.81-3000"
+  ],
+  "no_fabrication_pattern_in_source": true,
+  "all_access_edges_derived": true,
+  "secret_leaked_into_artifacts": false,
+  "nodes": 13,
+  "edges": 12
+}

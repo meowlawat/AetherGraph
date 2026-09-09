@@ -1,0 +1,300 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d38" for="edge" attr.name="semantic" attr.type="string"/>
+<key id="d37" for="edge" attr.name="justification" attr.type="string"/>
+<key id="d36" for="edge" attr.name="provenance" attr.type="string"/>
+<key id="d35" for="edge" attr.name="conf" attr.type="double"/>
+<key id="d34" for="edge" attr.name="etype" attr.type="string"/>
+<key id="d33" for="node" attr.name="evidence_refs" attr.type="string"/>
+<key id="d32" for="node" attr.name="location" attr.type="string"/>
+<key id="d31" for="node" attr.name="cvss_base" attr.type="double"/>
+<key id="d30" for="node" attr.name="repo_remotes" attr.type="string"/>
+<key id="d29" for="node" attr.name="file" attr.type="string"/>
+<key id="d28" for="node" attr.name="commit" attr.type="string"/>
+<key id="d27" for="node" attr.name="remote" attr.type="string"/>
+<key id="d26" for="node" attr.name="repo_name" attr.type="string"/>
+<key id="d25" for="node" attr.name="email" attr.type="string"/>
+<key id="d24" for="node" attr.name="vhost" attr.type="string"/>
+<key id="d23" for="node" attr.name="kind" attr.type="string"/>
+<key id="d22" for="node" attr.name="names_services" attr.type="string"/>
+<key id="d21" for="node" attr.name="source" attr.type="string"/>
+<key id="d20" for="node" attr.name="secret_kind" attr.type="string"/>
+<key id="d19" for="node" attr.name="username" attr.type="string"/>
+<key id="d18" for="node" attr.name="matched_at" attr.type="string"/>
+<key id="d17" for="node" attr.name="template_id" attr.type="string"/>
+<key id="d16" for="node" attr.name="severity_label" attr.type="string"/>
+<key id="d15" for="node" attr.name="title" attr.type="string"/>
+<key id="d14" for="node" attr.name="class" attr.type="string"/>
+<key id="d13" for="node" attr.name="status" attr.type="long"/>
+<key id="d12" for="node" attr.name="path" attr.type="string"/>
+<key id="d11" for="node" attr.name="http_title" attr.type="string"/>
+<key id="d10" for="node" attr.name="severity" attr.type="double"/>
+<key id="d9" for="node" attr.name="version" attr.type="string"/>
+<key id="d8" for="node" attr.name="product" attr.type="string"/>
+<key id="d7" for="node" attr.name="service" attr.type="string"/>
+<key id="d6" for="node" attr.name="proto" attr.type="string"/>
+<key id="d5" for="node" attr.name="port" attr.type="string"/>
+<key id="d4" for="node" attr.name="CR" attr.type="double"/>
+<key id="d3" for="node" attr.name="origin" attr.type="string"/>
+<key id="d2" for="node" attr.name="asset_class" attr.type="string"/>
+<key id="d1" for="node" attr.name="ip" attr.type="string"/>
+<key id="d0" for="node" attr.name="type" attr.type="string"/>
+<graph edgedefault="directed"><node id="host-192.168.65.254">
+  <data key="d0">Host</data>
+  <data key="d1">192.168.65.254</data>
+  <data key="d2">dmz-web</data>
+  <data key="d3">active</data>
+  <data key="d4">0.133</data>
+</node>
+<node id="svc-192.168.65.254-21">
+  <data key="d0">Service</data>
+  <data key="d5">21</data>
+  <data key="d6">tcp</data>
+  <data key="d7">ftp</data>
+  <data key="d8">vsftpd</data>
+  <data key="d9">3.0.2</data>
+  <data key="d10">0.53</data>
+  <data key="d2">dmz-web</data>
+  <data key="d3">active</data>
+  <data key="d4">0.387</data>
+</node>
+<node id="svc-192.168.65.254-80">
+  <data key="d0">Service</data>
+  <data key="d5">80</data>
+  <data key="d6">tcp</data>
+  <data key="d7">http</data>
+  <data key="d8">nginx</data>
+  <data key="d9">1.31.5</data>
+  <data key="d10">0.3</data>
+  <data key="d2">dmz-web</data>
+  <data key="d3">active</data>
+  <data key="d11">CorpTest Team</data>
+  <data key="d4">0.253</data>
+</node>
+<node id="svc-192.168.65.254-3000">
+  <data key="d0">Service</data>
+  <data key="d5">3000</data>
+  <data key="d6">tcp</data>
+  <data key="d7">http</data>
+  <data key="d8">Golang net/http server</data>
+  <data key="d9"></data>
+  <data key="d10">0.3</data>
+  <data key="d2">dmz-web</data>
+  <data key="d3">active</data>
+  <data key="d11">Gitea: Git with a cup of tea</data>
+  <data key="d4">0.172</data>
+</node>
+<node id="svc-192.168.65.254-8080">
+  <data key="d0">Service</data>
+  <data key="d5">8080</data>
+  <data key="d6">tcp</data>
+  <data key="d7">http</data>
+  <data key="d8">Apache httpd</data>
+  <data key="d9"></data>
+  <data key="d10">0.3</data>
+  <data key="d2">dmz-web</data>
+  <data key="d3">active</data>
+  <data key="d11">Site doesn't have a title (text/html).</data>
+  <data key="d4">0.295</data>
+</node>
+<node id="path-192.168.65.254-80-backup">
+  <data key="d0">WebPath</data>
+  <data key="d12">/backup</data>
+  <data key="d13">301</data>
+  <data key="d10">0.5</data>
+  <data key="d3">active</data>
+  <data key="d4">0.398</data>
+</node>
+<node id="path-192.168.65.254-3000-admin">
+  <data key="d0">WebPath</data>
+  <data key="d12">/admin</data>
+  <data key="d13">303</data>
+  <data key="d10">0.5</data>
+  <data key="d3">active</data>
+  <data key="d4">0.275</data>
+</node>
+<node id="nuclei-gitea-login-1">
+  <data key="d0">Finding</data>
+  <data key="d14">web-misconfig</data>
+  <data key="d15">Gitea Login Panel - Detect</data>
+  <data key="d10">0.1</data>
+  <data key="d16">info</data>
+  <data key="d17">gitea-login</data>
+  <data key="d18">http://host.docker.internal:3000/user/login</data>
+  <data key="d3">active</data>
+  <data key="d4">0.053</data>
+</node>
+<node id="nuclei-nginx-version-2">
+  <data key="d0">Finding</data>
+  <data key="d14">web-misconfig</data>
+  <data key="d15">Nginx version detect</data>
+  <data key="d10">0.1</data>
+  <data key="d16">info</data>
+  <data key="d17">nginx-version</data>
+  <data key="d18">http://host.docker.internal</data>
+  <data key="d3">active</data>
+  <data key="d4">0.053</data>
+</node>
+<node id="nuclei-backup-directory-listing-3">
+  <data key="d0">Finding</data>
+  <data key="d14">web-misconfig</data>
+  <data key="d15">Backup Directory Listing - Detect</data>
+  <data key="d10">0.3</data>
+  <data key="d16">low</data>
+  <data key="d17">backup-directory-listing</data>
+  <data key="d18">http://host.docker.internal/backup/</data>
+  <data key="d3">active</data>
+  <data key="d4">0.133</data>
+</node>
+<node id="cred-web-1">
+  <data key="d0">Credential</data>
+  <data key="d19">admin</data>
+  <data key="d20">plaintext-password</data>
+  <data key="d21">http://127.0.0.1/backup/secret.txt</data>
+  <data key="d10">0.7</data>
+  <data key="d22">[]</data>
+  <data key="d3">identity</data>
+  <data key="d4">0.603</data>
+</node>
+<node id="exposure-git-config-2">
+  <data key="d0">Exposure</data>
+  <data key="d23">git-config</data>
+  <data key="d21">http://127.0.0.1/.git/config (Host: dev.corp-testbed.local)</data>
+  <data key="d10">0.5</data>
+  <data key="d3">active</data>
+  <data key="d24">dev.corp-testbed.local</data>
+  <data key="d25">c.brown@corp-testbed.local</data>
+  <data key="d26">internal-tools</data>
+  <data key="d27">https://github.com/corp-testbed/internal-tools.git</data>
+  <data key="d4">0.275</data>
+</node>
+<node id="persona-c.brown">
+  <data key="d0">Persona</data>
+  <data key="d25">c.brown@corp-testbed.local</data>
+  <data key="d3">identity</data>
+  <data key="d4">0.26</data>
+</node>
+<node id="cred-c.brown">
+  <data key="d0">Credential</data>
+  <data key="d10">0.59</data>
+  <data key="d21">CorpTest_Dump_2021</data>
+  <data key="d3">identity</data>
+  <data key="d4">0.496</data>
+</node>
+<node id="cred-git-1">
+  <data key="d0">Credential</data>
+  <data key="d20">synthetic-aws-key</data>
+  <data key="d10">0.9</data>
+  <data key="d21">git-history</data>
+  <data key="d28">ad8d74822a4efc7bf6616893dcfc49cab0f3da4a</data>
+  <data key="d29">config.py</data>
+  <data key="d30">[]</data>
+  <data key="d3">identity</data>
+  <data key="d4">0.62</data>
+</node>
+<node id="finding-MAN-FTP-ANON">
+  <data key="d0">Finding</data>
+  <data key="d14">net-svc</data>
+  <data key="d15">Anonymous FTP access accepted</data>
+  <data key="d10">0.7</data>
+  <data key="d31">7.0</data>
+  <data key="d32">ftp://127.0.0.1:21</data>
+  <data key="d33">["manual-session-01"]</data>
+  <data key="d3">manual</data>
+  <data key="d4">0.603</data>
+</node>
+<node id="finding-MAN-DVWA-LOGIN">
+  <data key="d0">Finding</data>
+  <data key="d14">chain</data>
+  <data key="d15">DVWA default login requires manual confirmation</data>
+  <data key="d10">0.6</data>
+  <data key="d31">6.0</data>
+  <data key="d32">http://127.0.0.1:8080/login.php</data>
+  <data key="d33">["manual-session-02"]</data>
+  <data key="d3">manual</data>
+  <data key="d4">0.562</data>
+</node>
+<edge source="svc-192.168.65.254-21" target="host-192.168.65.254">
+  <data key="d34">HOSTS_SERVICE</data>
+  <data key="d35">1.0</data>
+  <data key="d36">observed</data>
+  <data key="d37">Nmap reported this service on this host</data>
+  <data key="d38">containment</data>
+</edge>
+<edge source="svc-192.168.65.254-80" target="host-192.168.65.254">
+  <data key="d34">HOSTS_SERVICE</data>
+  <data key="d35">1.0</data>
+  <data key="d36">observed</data>
+  <data key="d37">Nmap reported this service on this host</data>
+  <data key="d38">containment</data>
+</edge>
+<edge source="svc-192.168.65.254-3000" target="host-192.168.65.254">
+  <data key="d34">HOSTS_SERVICE</data>
+  <data key="d35">1.0</data>
+  <data key="d36">observed</data>
+  <data key="d37">Nmap reported this service on this host</data>
+  <data key="d38">containment</data>
+</edge>
+<edge source="svc-192.168.65.254-8080" target="host-192.168.65.254">
+  <data key="d34">HOSTS_SERVICE</data>
+  <data key="d35">1.0</data>
+  <data key="d36">observed</data>
+  <data key="d37">Nmap reported this service on this host</data>
+  <data key="d38">containment</data>
+</edge>
+<edge source="path-192.168.65.254-80-backup" target="svc-192.168.65.254-80">
+  <data key="d34">SERVES_PATH</data>
+  <data key="d35">1.0</data>
+  <data key="d36">observed</data>
+  <data key="d37">Gobuster retrieved this path from this service</data>
+  <data key="d38">containment</data>
+</edge>
+<edge source="path-192.168.65.254-3000-admin" target="svc-192.168.65.254-3000">
+  <data key="d34">SERVES_PATH</data>
+  <data key="d35">1.0</data>
+  <data key="d36">observed</data>
+  <data key="d37">Gobuster retrieved this path from this service</data>
+  <data key="d38">containment</data>
+</edge>
+<edge source="cred-web-1" target="path-192.168.65.254-80-backup">
+  <data key="d34">EXPOSED_BY</data>
+  <data key="d35">1.0</data>
+  <data key="d36">observed</data>
+  <data key="d37">retrieved from http://127.0.0.1/backup/secret.txt</data>
+  <data key="d38">evidence</data>
+</edge>
+<edge source="exposure-git-config-2" target="svc-192.168.65.254-80">
+  <data key="d34">EXPOSED_BY</data>
+  <data key="d35">1.0</data>
+  <data key="d36">observed</data>
+  <data key="d37">retrieved from http://127.0.0.1/.git/config (Host: dev.corp-testbed.local)</data>
+  <data key="d38">evidence</data>
+</edge>
+<edge source="exposure-git-config-2" target="persona-c.brown">
+  <data key="d34">IDENTIFIES</data>
+  <data key="d35">0.9</data>
+  <data key="d36">derived</data>
+  <data key="d37">exposed git config at http://127.0.0.1/.git/config (Host: dev.corp-testbed.local) records user.email c.brown@corp-testbed.local</data>
+  <data key="d38">evidence</data>
+</edge>
+<edge source="cred-c.brown" target="persona-c.brown">
+  <data key="d34">EXPOSES_CREDENTIAL</data>
+  <data key="d35">0.9</data>
+  <data key="d36">observed</data>
+  <data key="d37">row for c.brown@corp-testbed.local in the frozen corpus</data>
+  <data key="d38">evidence</data>
+</edge>
+<edge source="finding-MAN-FTP-ANON" target="svc-192.168.65.254-21">
+  <data key="d34">VALIDATES</data>
+  <data key="d35">1.0</data>
+  <data key="d36">derived</data>
+  <data key="d37">finding location ftp://127.0.0.1:21 names port 21; observed service svc-192.168.65.254-21 matches (127.0.0.1 declared an alias of 192.168.65.254)</data>
+  <data key="d38">validation</data>
+</edge>
+<edge source="finding-MAN-DVWA-LOGIN" target="svc-192.168.65.254-8080">
+  <data key="d34">VALIDATES</data>
+  <data key="d35">1.0</data>
+  <data key="d36">derived</data>
+  <data key="d37">finding location http://127.0.0.1:8080/login.php names port 8080; observed service svc-192.168.65.254-8080 matches (127.0.0.1 declared an alias of 192.168.65.254)</data>
+  <data key="d38">validation</data>
+</edge>
+</graph></graphml>

@@ -1,0 +1,3 @@
+{"id": "persona-c.brown", "attrs": {"type": "Persona", "email": "c.brown@corp-testbed.local", "origin": "identity"}, "edges": [{"to": "account-c.brown-ftp", "type": "OWNS_ACCOUNT", "conf": 0.75}]}
+{"id": "cred-c.brown", "attrs": {"type": "Credential", "severity": 0.59, "source": "CorpTest_Dump_2021", "origin": "identity"}, "edges": [{"to": "persona-c.brown", "type": "EXPOSES_CREDENTIAL", "conf": 0.9}]}
+{"id": "account-c.brown-ftp", "attrs": {"type": "Account", "username": "c.brown", "severity": 0.3, "origin": "identity"}, "edges": [{"to": "svc-192.168.65.254-21", "type": "ENABLES_ACCESS", "conf": 0.8}]}

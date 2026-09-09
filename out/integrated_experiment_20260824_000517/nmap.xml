@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.98 scan initiated Sun Aug 23 18:35:19 2026 as: /usr/bin/nmap -sV -&#45;version-all -p 21,80,8080,3000 -oX /out/nmap.xml host.docker.internal -->
+<nmaprun scanner="nmap" args="/usr/bin/nmap -sV -&#45;version-all -p 21,80,8080,3000 -oX /out/nmap.xml host.docker.internal" start="1787510119" startstr="Sun Aug 23 18:35:19 2026" version="7.98" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="4" services="21,80,3000,8080"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="192.168.65.254" addrtype="ipv4"/>
+<hostnames>
+<hostname name="host.docker.internal" type="user"/>
+</hostnames>
+</hosthint>
+<host starttime="1787510120" endtime="1787510392"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="192.168.65.254" addrtype="ipv4"/>
+<hostnames>
+<hostname name="host.docker.internal" type="user"/>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="vsftpd" version="3.0.2" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:3.0.2</cpe></service></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.31.4" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.31.4</cpe></service></port>
+<port protocol="tcp" portid="3000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Golang net/http server" servicefp="SF-Port3000-TCP:V=7.98%I=9%D=8/23%Time=6A8B3D6E%P=x86_64-unknown-linux-gnu%r(GenericLines,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request&quot;)%r(GetRequest,380F,&quot;HTTP/1\.0\x20200\x20OK\r\nCache-Control:\x20max-age=0,\x20private,\x20must-revalidate,\x20no-transform\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nSet-Cookie:\x20i_like_gitea=f2ce29892c64b207;\x20Path=/;\x20HttpOnly;\x20SameSite=Lax\r\nSet-Cookie:\x20_csrf=seLlhPNqO86RqEPZ6bAYHbhenmM6MTc4NzUxMDEyNjY4ODk1ODQ2NQ;\x20Path=/;\x20Max-Age=86400;\x20HttpOnly;\x20SameSite=Lax\r\nX-Frame-Options:\x20SAMEORIGIN\r\nDate:\x20Sun,\x2023\x20Aug\x202026\x2018:35:26\x20GMT\r\n\r\n&lt;!DOCTYPE\x20html&gt;\n&lt;html\x20lang=\&quot;en-US\&quot;\x20data-theme=\&quot;gitea-auto\&quot;&gt;\n&lt;head&gt;\n\t&lt;meta\x20name=\&quot;viewport\&quot;\x20content=\&quot;width=device-width,\x20initial-scale=1\&quot;&gt;\n\t&lt;title&gt;Gitea:\x20Git\x20with\x20a\x20cup\x20of\x20tea&lt;/title&gt;\n\t&lt;link\x20rel=\&quot;manifest\&quot;\x20href=\&quot;data:application/json;base64,eyJuYW1lIjoiR2l0ZWE6IEdpdCB3aXRoIGEgY3VwIG9mIHRlYSIsInNob3J0X25hbWUiOiJHaXRlYTogR2l0IHdpdGggYSBjdXAgb2YgdGVhIiwic3RhcnRfdXJsIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwLyIsImljb25zIjpbeyJzcmMiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAvYXNzZXRzL2ltZy9sb2dvLnBuZyIsInR5cGUiOiJpbWFnZS9wbmciLCJzaXplcy&quot;)%r(Help,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request&quot;)%r(HTTPOptions,197,&quot;HTTP/1\.0\x20405\x20Method\x20Not\x20Allowed\r\nAllow:\x20HEAD\r\nAllow:\x20GET\r\nCache-Control:\x20max-age=0,\x20private,\x20must-revalidate,\x20no-transform\r\nSet-Cookie:\x20i_like_gitea=6a878e10a3068d8f;\x20Path=/;\x20HttpOnly;\x20SameSite=Lax\r\nSet-Cookie:\x20_csrf=SacebGrv_Q-008jTxCgJpq4Qzls6MTc4NzUxMDEzMTc2MzA1NTA5OQ;\x20Path=/;\x20Max-Age=86400;\x20HttpOnly;\x20SameSite=Lax\r\nX-Frame-Options:\x20SAMEORIGIN\r\nDate:\x20Sun,\x2023\x20Aug\x202026\x2018:35:31\x20GMT\r\nContent-Length:\x200\r\n\r\n&quot;)%r(RTSPRequest,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request&quot;);" method="probed" conf="10"><cpe>cpe:/a:golang:go</cpe></service></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.25" extrainfo="(Debian)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.25</cpe></service></port>
+</ports>
+<times srtt="1939" rttvar="2675" to="100000"/>
+</host>
+<runstats><finished time="1787510392" timestr="Sun Aug 23 18:39:52 2026" summary="Nmap done at Sun Aug 23 18:39:52 2026; 1 IP address (1 host up) scanned in 273.49 seconds" elapsed="273.49" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

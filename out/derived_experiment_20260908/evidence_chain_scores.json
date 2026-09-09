@@ -1,0 +1,34 @@
+{
+  "run_dir": "derived_experiment_20260908",
+  "configurations": {
+    "three-origin, attack traversal (headline configuration)": [],
+    "three-origin, evidence traversal": [],
+    "two-origin, evidence traversal (quoted in the failure analysis)": [
+      {
+        "score": 1.354,
+        "path": [
+          "cred-web-1",
+          "path-192.168.65.254-80-backup",
+          "svc-192.168.65.254-80"
+        ]
+      },
+      {
+        "score": 1.286,
+        "path": [
+          "cred-web-1",
+          "path-192.168.65.254-80-backup",
+          "svc-192.168.65.254-80",
+          "host-192.168.65.254"
+        ]
+      },
+      {
+        "score": 1.14,
+        "path": [
+          "cred-web-1",
+          "path-192.168.65.254-80-backup"
+        ]
+      }
+    ],
+    "two-origin, attack traversal": []
+  }
+}

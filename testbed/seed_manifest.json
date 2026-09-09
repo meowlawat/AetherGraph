@@ -1,0 +1,173 @@
+{
+  "manifest_version": 1,
+  "description": "Ground truth for the AetherGraph synthetic testbed. Every item here was planted deliberately by testbed/docker-compose.yml, testbed/nginx/html, testbed/setup_gitea.py, corpus/frozen.csv, or collectors/vapt_report.json. Because the environment is constructed, recall can be measured against this file without an external labelling effort. Recall measured this way says whether the pipeline recovers what was planted; it says nothing about performance on real infrastructure.",
+  "seeded_services": [
+    {
+      "port": "21",
+      "product": "vsftpd",
+      "planted_by": "docker-compose.yml ftp service"
+    },
+    {
+      "port": "80",
+      "product": "nginx",
+      "planted_by": "docker-compose.yml web service"
+    },
+    {
+      "port": "3000",
+      "product": "Gitea",
+      "planted_by": "docker-compose.yml gitea service"
+    },
+    {
+      "port": "8080",
+      "product": "Apache",
+      "planted_by": "docker-compose.yml dvwa service"
+    }
+  ],
+  "seeded_web_paths": [
+    {
+      "path": "/backup",
+      "port": "80",
+      "planted_by": "nginx.conf autoindex on nginx/html/www/backup"
+    },
+    {
+      "path": "/admin",
+      "port": "3000",
+      "planted_by": "Gitea's own routing"
+    }
+  ],
+  "seeded_evidence": [
+    {
+      "id": "SEED-EMAIL-COMMENT",
+      "what": "c.brown@corp-testbed.local in an HTML comment on the :80 landing page",
+      "planted_by": "testbed/nginx/html/www/index.html",
+      "recoverable_by": "identity"
+    },
+    {
+      "id": "SEED-CORPUS-ROW",
+      "what": "corpus row matching c.brown@corp-testbed.local to CorpTest_Dump_2021",
+      "planted_by": "corpus/frozen.csv",
+      "recoverable_by": "identity"
+    },
+    {
+      "id": "SEED-BACKUP-CREDS",
+      "what": "plaintext USER=admin credential pair in secret.txt behind the /backup listing",
+      "planted_by": "testbed/nginx/html/www/backup/secret.txt",
+      "recoverable_by": "web-evidence"
+    },
+    {
+      "id": "SEED-GIT-CONFIG",
+      "what": "exposed .git/config naming user.email c.brown@corp-testbed.local and repo internal-tools",
+      "planted_by": "testbed/nginx/html/dev/.git/config",
+      "recoverable_by": "web-evidence"
+    },
+    {
+      "id": "SEED-GIT-CANARY",
+      "what": "invalid AKIAEXAMPLE000000000 canary committed in config.py",
+      "planted_by": "testbed/setup_gitea.py",
+      "recoverable_by": "secret"
+    },
+    {
+      "id": "SEED-FTP-ANON",
+      "what": "anonymous FTP access, recorded as a manual finding",
+      "planted_by": "collectors/vapt_report.json MAN-FTP-ANON",
+      "recoverable_by": "manual"
+    },
+    {
+      "id": "SEED-DVWA-LOGIN",
+      "what": "DVWA default login condition, recorded as a manual finding",
+      "planted_by": "collectors/vapt_report.json MAN-DVWA-LOGIN",
+      "recoverable_by": "manual"
+    }
+  ],
+  "expected_links": [
+    {
+      "id": "LINK-BACKUP-CRED",
+      "from_type": "Credential",
+      "to_type": "WebPath",
+      "edge": "EXPOSED_BY",
+      "rationale": "the credentials file is reachable through the discovered /backup listing, so the link is directly observed",
+      "expected_provenance": "observed",
+      "match": {
+        "from_prefix": "cred-web-",
+        "to_prefix": "path-",
+        "to_suffix": "-backup"
+      }
+    },
+    {
+      "id": "LINK-GITCONFIG-PERSONA",
+      "from_type": "Exposure",
+      "to_type": "Persona",
+      "edge": "IDENTIFIES",
+      "rationale": "the exposed git config records the persona's email address",
+      "expected_provenance": "derived",
+      "match": {
+        "from_prefix": "exposure-git-config",
+        "to_prefix": "persona-",
+        "to_suffix": ""
+      }
+    },
+    {
+      "id": "LINK-CORPUS-PERSONA",
+      "from_type": "Credential",
+      "to_type": "Persona",
+      "edge": "EXPOSES_CREDENTIAL",
+      "rationale": "the corpus row literally contains the harvested address",
+      "expected_provenance": "observed",
+      "match": {
+        "from_prefix": "cred-c.brown",
+        "to_prefix": "persona-",
+        "to_suffix": ""
+      }
+    },
+    {
+      "id": "LINK-FTPFINDING-SERVICE",
+      "from_type": "Finding",
+      "to_type": "Service",
+      "edge": "VALIDATES",
+      "rationale": "the finding's location ftp://127.0.0.1:21 names a port the scanner observed open",
+      "expected_provenance": "derived",
+      "match": {
+        "from_prefix": "finding-MAN-FTP-ANON",
+        "to_prefix": "svc-",
+        "to_suffix": "-21"
+      }
+    },
+    {
+      "id": "LINK-DVWAFINDING-SERVICE",
+      "from_type": "Finding",
+      "to_type": "Service",
+      "edge": "VALIDATES",
+      "rationale": "the finding's location http://127.0.0.1:8080/login.php names a port the scanner observed open",
+      "expected_provenance": "derived",
+      "match": {
+        "from_prefix": "finding-MAN-DVWA-LOGIN",
+        "to_prefix": "svc-",
+        "to_suffix": "-8080"
+      }
+    }
+  ],
+  "forbidden_links": [
+    {
+      "id": "NOLINK-CANARY-GITEA",
+      "pattern": {
+        "from_prefix": "cred-git-",
+        "to_suffix": "-3000"
+      },
+      "why": "the canary is an AWS-shaped key, the seed repository has no remote, and nothing ties the secret to the Gitea service. Any edge here is fabricated.",
+      "regression_of": "run_secret_scan.py hardcoded svc-{ip}-3000 as the target of every repository secret"
+    },
+    {
+      "id": "NOLINK-PERSONA-FTPACCOUNT",
+      "pattern": {
+        "from_prefix": "account-c.brown",
+        "to_suffix": "-21"
+      },
+      "why": "the FTP container is provisioned with FTP_USER=test. No account exists for c.brown, so an account node for that user on port 21 describes nothing in the environment.",
+      "regression_of": "run_identity.py created account-{user}-ftp for every harvested email"
+    }
+  ],
+  "notes": [
+    "SEED-BACKUP-CREDS names no service in its content, so it must not produce an account link to any service. The absence of that link is correct behaviour, not a miss.",
+    "No tri-layer (active+identity+manual) path is expected to be derivable in this testbed. The two such paths reported in earlier results existed only because of the two forbidden links above."
+  ]
+}

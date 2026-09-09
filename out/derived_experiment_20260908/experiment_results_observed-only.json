@@ -1,0 +1,45 @@
+{
+  "mode": "observed-only",
+  "traversal": "attack (ACCESS edges only) unless stated",
+  "nodes": 14,
+  "edges": 9,
+  "provenance_counts": {
+    "observed": 9
+  },
+  "semantic_counts": {
+    "containment": 6,
+    "evidence": 3
+  },
+  "entries": [
+    "cred-c.brown",
+    "cred-git-1",
+    "cred-web-1",
+    "finding-MAN-DVWA-LOGIN",
+    "finding-MAN-FTP-ANON",
+    "persona-c.brown"
+  ],
+  "jewels": [
+    "svc-192.168.65.254-21",
+    "svc-192.168.65.254-3000",
+    "svc-192.168.65.254-80",
+    "svc-192.168.65.254-8080"
+  ],
+  "tri_layer_attack_paths": [],
+  "tri_layer_evidence_paths": [],
+  "node_scores": {
+    "host-192.168.65.254": 0.113,
+    "svc-192.168.65.254-21": 0.265,
+    "svc-192.168.65.254-80": 0.253,
+    "svc-192.168.65.254-3000": 0.172,
+    "svc-192.168.65.254-8080": 0.172,
+    "path-192.168.65.254-80-backup": 0.398,
+    "path-192.168.65.254-3000-admin": 0.275,
+    "cred-web-1": 0.603,
+    "exposure-git-config-2": 0.275,
+    "persona-c.brown": 0.26,
+    "cred-c.brown": 0.496,
+    "cred-git-1": 0.62,
+    "finding-MAN-FTP-ANON": 0.54,
+    "finding-MAN-DVWA-LOGIN": 0.5
+  }
+}

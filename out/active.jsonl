@@ -1,0 +1,4 @@
+{"id": "host-entry", "attrs": {"type": "Host", "asset_class": "dmz-web", "origin": "active"}, "edges": []}
+{"id": "host-files", "attrs": {"type": "Host", "asset_class": "internal-app", "origin": "active"}, "edges": []}
+{"id": "svc-files-21", "attrs": {"type": "Service", "severity": 0.53, "asset_class": "internal-app", "origin": "active"}, "edges": [{"to": "host-files", "type": "HOSTS_SERVICE", "conf": 1.0}]}
+{"id": "link-entry-files", "attrs": {"type": "NetworkLink", "origin": "active"}, "edges": [{"to": "host-entry", "type": "CONNECTS_TO", "conf": 1.0}, {"to": "host-files", "type": "CONNECTS_TO", "conf": 1.0}]}

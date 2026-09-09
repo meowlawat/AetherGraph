@@ -1,0 +1,39 @@
+==============================================================================
+LAYER x PROVENANCE ABLATION
+==============================================================================
+layer subset      mode             nodes  edges  attack paths  evidence paths
+------------------------------------------------------------------------------
+active only       observed-only        7      6             0               0
+active only       derived              7      6             0               0
+active only       all                  7      6             0               0
+------------------------------------------------------------------------------
++ web evidence    observed-only        9      8             0               0
++ web evidence    derived              9      8             0               0   (1 edge(s) into withheld streams)
++ web evidence    all                  9      8             0               0   (1 edge(s) into withheld streams)
+------------------------------------------------------------------------------
++ identity        observed-only       12      9             0               0
++ identity        derived             12     10             0               0
++ identity        all                 12     10             0               0
+------------------------------------------------------------------------------
++ manual (all)    observed-only       14      9             0               0
++ manual (all)    derived             14     12             0               0
++ manual (all)    all                 14     13             0               0
+------------------------------------------------------------------------------
+attack paths   = walking only ACCESS edges (attacker movement)
+evidence paths = walking every edge type, as the original implementation did
+
+EDGE PROVENANCE IN THE FULL GRAPH
+  observed   9
+  derived    3
+  declared   1
+
+GROUND TRUTH (testbed/seed_manifest.json)
+  [recovered] LINK-BACKUP-CRED           cred-web-1 -EXPOSED_BY-> path-192.168.65.254-80-backup
+  [recovered] LINK-GITCONFIG-PERSONA     exposure-git-config-2 -IDENTIFIES-> persona-c.brown
+  [recovered] LINK-CORPUS-PERSONA        cred-c.brown -EXPOSES_CREDENTIAL-> persona-c.brown
+  [recovered] LINK-FTPFINDING-SERVICE    finding-MAN-FTP-ANON -VALIDATES-> svc-192.168.65.254-21
+  [recovered] LINK-DVWAFINDING-SERVICE   finding-MAN-DVWA-LOGIN -VALIDATES-> svc-192.168.65.254-8080
+  recall: 5/5 expected links recovered
+  fabricated links: 0 of 2 forbidden patterns present
+
+[+] Wrote out/derived_experiment_20260908/ablation_results.json

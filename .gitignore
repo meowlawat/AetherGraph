@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+
+# LaTeX build products
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# Nuclei template cache and scratch scan dirs (large, regenerable)
+out/nuclei_bootstrap_test/
+out/nuclei_test_*/
+out/experiment_*/
+out/integrated_experiment_2026082400104*/
+out/integrated_experiment_2026082400162*/
+out/integrated_experiment_2026082400264*/
+out/integrated_experiment_2026082400300*/
+
+# The positive-access experiment writes a repository containing a LIVE token
+# into its working tree. Never commit it.
+out/positive_access_live/repo/
+out/positive_access_live/negative_control/
+out/positive_access_live/negative_control_unobserved/
+
+# Secrets must never be committed.
+*.token
+pac_token.txt

@@ -1,0 +1,222 @@
+{
+  "ablation": {
+    "active only|observed-only": {
+      "nodes": 7,
+      "edges": 6,
+      "tri_layer_attack_paths": [],
+      "tri_layer_evidence_paths": [],
+      "provenance": {
+        "observed": 6,
+        "derived": 0,
+        "declared": 0
+      },
+      "semantics": {
+        "containment": 6
+      },
+      "edges_dropped_into_withheld_streams": 0
+    },
+    "active only|derived": {
+      "nodes": 7,
+      "edges": 6,
+      "tri_layer_attack_paths": [],
+      "tri_layer_evidence_paths": [],
+      "provenance": {
+        "observed": 6,
+        "derived": 0,
+        "declared": 0
+      },
+      "semantics": {
+        "containment": 6
+      },
+      "edges_dropped_into_withheld_streams": 0
+    },
+    "active only|all": {
+      "nodes": 7,
+      "edges": 6,
+      "tri_layer_attack_paths": [],
+      "tri_layer_evidence_paths": [],
+      "provenance": {
+        "observed": 6,
+        "derived": 0,
+        "declared": 0
+      },
+      "semantics": {
+        "containment": 6
+      },
+      "edges_dropped_into_withheld_streams": 0
+    },
+    "+ web evidence|observed-only": {
+      "nodes": 9,
+      "edges": 8,
+      "tri_layer_attack_paths": [],
+      "tri_layer_evidence_paths": [],
+      "provenance": {
+        "observed": 8,
+        "derived": 0,
+        "declared": 0
+      },
+      "semantics": {
+        "containment": 6,
+        "evidence": 2
+      },
+      "edges_dropped_into_withheld_streams": 0
+    },
+    "+ web evidence|derived": {
+      "nodes": 9,
+      "edges": 8,
+      "tri_layer_attack_paths": [],
+      "tri_layer_evidence_paths": [],
+      "provenance": {
+        "observed": 8,
+        "derived": 0,
+        "declared": 0
+      },
+      "semantics": {
+        "containment": 6,
+        "evidence": 2
+      },
+      "edges_dropped_into_withheld_streams": 1
+    },
+    "+ web evidence|all": {
+      "nodes": 9,
+      "edges": 8,
+      "tri_layer_attack_paths": [],
+      "tri_layer_evidence_paths": [],
+      "provenance": {
+        "observed": 8,
+        "derived": 0,
+        "declared": 0
+      },
+      "semantics": {
+        "containment": 6,
+        "evidence": 2
+      },
+      "edges_dropped_into_withheld_streams": 1
+    },
+    "+ identity|observed-only": {
+      "nodes": 12,
+      "edges": 9,
+      "tri_layer_attack_paths": [],
+      "tri_layer_evidence_paths": [],
+      "provenance": {
+        "observed": 9,
+        "derived": 0,
+        "declared": 0
+      },
+      "semantics": {
+        "containment": 6,
+        "evidence": 3
+      },
+      "edges_dropped_into_withheld_streams": 0
+    },
+    "+ identity|derived": {
+      "nodes": 12,
+      "edges": 10,
+      "tri_layer_attack_paths": [],
+      "tri_layer_evidence_paths": [],
+      "provenance": {
+        "observed": 9,
+        "derived": 1,
+        "declared": 0
+      },
+      "semantics": {
+        "containment": 6,
+        "evidence": 4
+      },
+      "edges_dropped_into_withheld_streams": 0
+    },
+    "+ identity|all": {
+      "nodes": 12,
+      "edges": 10,
+      "tri_layer_attack_paths": [],
+      "tri_layer_evidence_paths": [],
+      "provenance": {
+        "observed": 9,
+        "derived": 1,
+        "declared": 0
+      },
+      "semantics": {
+        "containment": 6,
+        "evidence": 4
+      },
+      "edges_dropped_into_withheld_streams": 0
+    },
+    "+ manual (all)|observed-only": {
+      "nodes": 14,
+      "edges": 9,
+      "tri_layer_attack_paths": [],
+      "tri_layer_evidence_paths": [],
+      "provenance": {
+        "observed": 9,
+        "derived": 0,
+        "declared": 0
+      },
+      "semantics": {
+        "containment": 6,
+        "evidence": 3
+      },
+      "edges_dropped_into_withheld_streams": 0
+    },
+    "+ manual (all)|derived": {
+      "nodes": 14,
+      "edges": 12,
+      "tri_layer_attack_paths": [],
+      "tri_layer_evidence_paths": [],
+      "provenance": {
+        "observed": 9,
+        "derived": 3,
+        "declared": 0
+      },
+      "semantics": {
+        "containment": 6,
+        "evidence": 4,
+        "validation": 2
+      },
+      "edges_dropped_into_withheld_streams": 0
+    },
+    "+ manual (all)|all": {
+      "nodes": 14,
+      "edges": 13,
+      "tri_layer_attack_paths": [],
+      "tri_layer_evidence_paths": [],
+      "provenance": {
+        "observed": 9,
+        "derived": 3,
+        "declared": 1
+      },
+      "semantics": {
+        "containment": 6,
+        "evidence": 4,
+        "validation": 2,
+        "correlation": 1
+      },
+      "edges_dropped_into_withheld_streams": 0
+    }
+  },
+  "recall": {
+    "found": [
+      [
+        "LINK-BACKUP-CRED",
+        "cred-web-1 -EXPOSED_BY-> path-192.168.65.254-80-backup"
+      ],
+      [
+        "LINK-GITCONFIG-PERSONA",
+        "exposure-git-config-2 -IDENTIFIES-> persona-c.brown"
+      ],
+      [
+        "LINK-CORPUS-PERSONA",
+        "cred-c.brown -EXPOSES_CREDENTIAL-> persona-c.brown"
+      ],
+      [
+        "LINK-FTPFINDING-SERVICE",
+        "finding-MAN-FTP-ANON -VALIDATES-> svc-192.168.65.254-21"
+      ],
+      [
+        "LINK-DVWAFINDING-SERVICE",
+        "finding-MAN-DVWA-LOGIN -VALIDATES-> svc-192.168.65.254-8080"
+      ]
+    ],
+    "missing": []
+  },
+  "violations": []
+}

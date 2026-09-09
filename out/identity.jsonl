@@ -1,0 +1,3 @@
+{"id": "cred-p1", "attrs": {"type": "Credential", "severity": 0.59, "origin": "identity"}, "edges": [{"to": "persona-1", "type": "EXPOSES_CREDENTIAL", "conf": 0.9}]}
+{"id": "persona-1", "attrs": {"type": "Persona", "origin": "identity"}, "edges": [{"to": "account-p1-files", "type": "OWNS_ACCOUNT", "conf": 0.75}]}
+{"id": "account-p1-files", "attrs": {"type": "Account", "origin": "identity", "severity": 0.3}, "edges": [{"to": "svc-files-21", "type": "ENABLES_ACCESS", "conf": 0.8}]}

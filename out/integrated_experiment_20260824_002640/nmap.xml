@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.98 scan initiated Sun Aug 23 18:56:42 2026 as: /usr/bin/nmap -sV -&#45;version-all -p 21,80,8080,3000 -oX /out/nmap.xml host.docker.internal -->
+<nmaprun scanner="nmap" args="/usr/bin/nmap -sV -&#45;version-all -p 21,80,8080,3000 -oX /out/nmap.xml host.docker.internal" start="1787511402" startstr="Sun Aug 23 18:56:42 2026" version="7.98" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="4" services="21,80,3000,8080"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="192.168.65.254" addrtype="ipv4"/>
+<hostnames>
+<hostname name="host.docker.internal" type="user"/>
+</hostnames>
+</hosthint>
