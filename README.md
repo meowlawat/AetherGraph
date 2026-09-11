@@ -53,4 +53,4 @@ A live end-to-end run and the positive-control experiment require Docker; see `o
 
 ## Authors
 
-Hardik (IIT Patna) and Parth (VIPS-TC, Delhi) — joint first authors.
+Hardik (IIT Patna & VIPS-TC) and Parth (VIPS-TC, Delhi) — joint first authors.
